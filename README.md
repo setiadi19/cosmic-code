@@ -11,7 +11,7 @@
 <br>
 # worked by our team
 
-## Team  : Medan Team 6
+## Team  : Cosmic Code
 
 <br>
 
