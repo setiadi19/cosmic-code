@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="">
-    <img src="[logorevoU.png](https://static.vecteezy.com/system/resources/previews/008/362/666/non_2x/the-letter-c-logo-that-makes-up-the-cosmic-planet-vector.jpg)" width='250dp' alt="Logo" >
+    <img src="https://static.vecteezy.com/system/resources/previews/008/362/666/non_2x/the-letter-c-logo-that-makes-up-the-cosmic-planet-vector.jpg" width='250dp' alt="Logo" >
   </a>
 
   <h1 align="center">Capstone Project Cosmic Code</h1>
