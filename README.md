@@ -15,9 +15,9 @@
 
 <br>
 
-| Name Project                            | Section     | Team        | Role                      |
-| -----------------------------   | ----------- | ----------- | --------------------------|
-| 1.website sederhana dgn html &css                   | Medan       | 6           | Front End Engineer        |
+|NO | Name Project                            | Section     | Team        |    Role           |
+|---| -------------------------------------   | ----------- | ----------- | ------------------|
+|1. | website sederhana dgn html &css         | Medan       | 6           | Front End Engineer|
 
 
 
