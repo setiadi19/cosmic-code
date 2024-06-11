@@ -6,10 +6,10 @@
 
   <h1 align="center">My Project Cosmic Code</h1>
   <h2 align="center">
-  Cosmic Code - Learn Data Analytics & Software Development With AI Capstone Project worked by our team.</h2> 
+  Cosmic Code - Learn Data Analytics & Software Development.</h2> 
 </p>
 <br>
-# Team Members
+# worked by our team
 
 ## Team  : Medan Team 6
 
