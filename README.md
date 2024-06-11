@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="">
-    <img src="bg.png" width='250dp' alt="Logo" >
+    <img src="cosmiccode.png" width='250dp' alt="Logo" >
   </a>
 
   <h1 align="center">My Project Cosmic Code</h1>
