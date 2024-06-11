@@ -15,9 +15,9 @@
 
 <br>
 
-|NO | Name Project                            | Section     | Team        |    Role           |
-|---| -------------------------------------   | ----------- | ----------- | ------------------|
-|1. | website sederhana dgn html &css         | Medan       | 6           | Front End Engineer|
+| No.| Name Project                            | Created     | Team        |    Role           |
+|----| -------------------------------------   | ----------- | ----------- | ------------------|
+|1.  | website sederhana dgn html &css         | 11 Juni 2024| 6           | Front End Engineer|
 
 
 
