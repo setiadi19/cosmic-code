@@ -15,9 +15,9 @@
 
 <br>
 
-| Name                            | Section     | Team        | Role                      |
+| Name Project                            | Section     | Team        | Role                      |
 | -----------------------------   | ----------- | ----------- | --------------------------|
-| Teguh Setiadi                   | Medan       | 6           | Front End Engineer        |
+| 1.website sederhana dgn html &css                   | Medan       | 6           | Front End Engineer        |
 
 
 
