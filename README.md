@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="">
-    <img src="https://static.vecteezy.com/system/resources/thumbnails/006/639/377/small_2x/solar-system-icon-illustration-free-vector.jpg" width='250dp' alt="Logo" >
+    <img src="bg.png" width='250dp' alt="Logo" >
   </a>
 
   <h1 align="center">My Project Cosmic Code</h1>
