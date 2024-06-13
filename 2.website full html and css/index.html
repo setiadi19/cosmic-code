@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic code</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="kolom-kiri">
+        <img src="https://i.pinimg.com/736x/8e/92/cc/8e92ccfd3d1240d79fb97fc7b0a15072.jpg" class="logo" />
+        <div class="content">
+          <h1>Cosmic Code</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque accusantium eius quia adipisci facilis praesentium tempora aperiam iusto consequuntur.</p>
+          <button type="button">LEARN MORE</button>
+        </div>
+      </div>
+      <div class="kolom-kanan">
+        <div class="slider">
+          <img src="https://png.pngtree.com/png-vector/20220719/ourmid/pngtree-tata-cara-sholat-untuk-anak-muslim-png-image_6007301.png" id="Slide" />
+        </div>
+        <div class="slider-content">
+          <h2>Lorem ipsum dolor sit amet, Eum, impedit!</h2>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
+            Quo eveniet quasi consectetur sed veritatis soluta tempora possimus architecto explicabo quibusdam?
+          </p>
+
+          <div class="controller">
+            <img src="img/photo-back.png" id="BackBtn" />
+            <div class="vartical-line"></div>
+            <img src="img/photo-next.png" id="NextBtn" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var Slide = document.getElementById("Slide");
+      var BackBtn = document.getElementById("BackBtn");
+      var NextBtn = document.getElementById("NextBtn");
+
+      var slideimg = new Array("img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg");
+      let i = 0;
+
+      NextBtn.onclick = function () {
+        if (i < 4) {
+          Slide.src = slideimg[i + 0];
+          i++;
+        }
+      };
+      BackBtn.onclick = function () {
+        if (i > 0) {
+          Slide.src = slideimg[i - 1];
+          i--;
+        }
+      };
+    </script>
+  </body>
+</html>
