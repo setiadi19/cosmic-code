@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "comic sans ms";
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: url(https://i.pinimg.com/originals/c3/d8/51/c3d85167a8ff391d2076be0842482679.png);
+    background-size: cover;
+    background-position: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+  }
+  .navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    font-size: 24px; /* Sesuaikan ukuran font */
+    color: #fff;
+    margin-right: 200px; /* Spasi antara logo dan menu navigasi */
+  }
+  .menu-icon {
+    width: 30px;
+    cursor: pointer;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+  nav {
+    flex: 1;
+    text-align: right;
+  }
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 40px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+    font-size: 13px;
+  }
+  .row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+  }
+  .col {
+    flex-basis: 50%;
+  }
+  h1 {
+    color: #fff;
+  }
+  p {
+    color: #fff;
+    line-height: 15px;
+  }
+  button {
+    width: 180px;
+    background-color: #4caf50;
+    color: #fff;
+    border: 0;
+    padding: 12px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 30px;
+    border-radius: 20px;
+  }
+  button:hover {
+    background-color: orange;
+  }
+  .card {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transfrom 0.5;
+  }
+  .card1 {
+    background-image: url(https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/hops/2021/08/Science.jpg);
+  }
+  .card2 {
+    background-image: url(https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2023/08/28/Screenshot-24781-3088533845.png);
+  }
+  .card3 {
+    background-image: url(https://asset.kompas.com/crops/1R9ZYxrGfIlcdCvCsbYdavIkya0=/156x17:906x517/1200x800/data/photo/2020/11/15/5fb0ebbf842fb.jpg);
+  }
+  .card4 {
+    background-image: url(https://ratu.ai/wp-content/uploads/2024/02/fakta-unik-tentang-tata-surya-1.jpg);
+  }
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  h5 {
+    font-size: 18px;
+    color: #000;
+    text-shadow: 0 0 5px #999;
+    text: border;
+  }
+  .card p {
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .logo {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    nav {
+      text-align: left;
+    }
+    nav ul li {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    nav ul li a {
+      font-size: 16px;
+    }
+    .row {
+      flex-direction: column; /* Susunan kolom pada layar kecil */
+    }
+    .col {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
