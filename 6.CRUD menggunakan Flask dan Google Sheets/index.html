@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh Tabel CRUD</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      .form-container {
+        margin-bottom: 20px;
+      }
+      .form-container input {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tabel CRUD</h1>
+    <div class="form-container">
+      <input type="text" id="name" placeholder="Nama" />
+      <input type="text" id="age" placeholder="Usia" />
+      <button onclick="createData()">Tambah</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Usia</th>
+          <th>Tindakan</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Data akan ditambahkan di sini -->
+      </tbody>
+    </table>
+
+    <script>
+      async function fetchData() {
+        try {
+          const response = await fetch("http://127.0.0.1:5000/fetch_data");
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      }
+
+      async function populateTable() {
+        const data = await fetchData();
+        const tableBody = document.getElementById("table-body");
+        tableBody.innerHTML = ""; // Hapus baris tabel yang sudah ada
+
+        if (data) {
+          data.forEach((item) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+            <td>${item[0]}</td>
+            <td>${item[1]}</td>
+            <td>
+              <button onclick="editData('${item[0]}', '${item[1]}')">Edit</button>
+              <button onclick="deleteData('${item[0]}')">Hapus</button>
+            </td>`;
+            tableBody.appendChild(row);
+          });
+        }
+      }
+
+      async function createData() {
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+
+        try {
+          const response = await fetch("http://127.0.0.1:5000/create_data", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, age }),
+          });
+
+          if (response.ok) {
+            await populateTable();
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+          } else {
+            console.error("Gagal membuat data");
+          }
+        } catch (error) {
+          console.error("Error creating data:", error);
+        }
+      }
+
+      async function editData(name, age) {
+        const newName = prompt("Edit Nama:", name);
+        const newAge = prompt("Edit Usia:", age);
+
+        if (newName !== null && newAge !== null) {
+          try {
+            const response = await fetch("http://127.0.0.1:5000/edit_data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ oldName: name, newName: newName, newAge: newAge }),
+            });
+
+            if (response.ok) {
+              await populateTable();
+            } else {
+              console.error("Gagal mengedit data");
+            }
+          } catch (error) {
+            console.error("Error editing data:", error);
+          }
+        }
+      }
+
+      async function deleteData(name) {
+        if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+          try {
+            const response = await fetch("http://127.0.0.1:5000/delete_data", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name: name }),
+            });
+
+            if (response.ok) {
+              await populateTable();
+            } else {
+              console.error("Gagal menghapus data");
+            }
+          } catch (error) {
+            console.error("Error deleting data:", error);
+          }
+        }
+      }
+
+      window.onload = populateTable;
+    </script>
+  </body>
+</html>
